@@ -1,20 +1,22 @@
-// 运行在 Electron 渲染进程 下的页面脚本
+export function onLoad() {
+  const observer = new MutationObserver((mutationsList) => {
+    for (let mutation of mutationsList) {
+      if (mutation.type === "childList") {
+        const targetElements = document.querySelectorAll(
+          "span.q-context-menu-item__text"
+        );
+        targetElements.forEach((element) => {
+          if (element.textContent === "回复") {
+            element.parentNode.style.color = "red";
+          }
+        });
+      }
+    }
+  });
 
+  const targetNode = document.body;
+  const config = { childList: true, subtree: true };
+  observer.observe(targetNode, config);
 
-// 页面加载完成时触发
-function onLoad() {
-
-}
-
-
-// 打开设置界面时触发
-function onConfigView(view) {
-
-}
-
-
-// 这两个函数都是可选的
-export {
-    onLoad,
-    onConfigView
+  LiteLoaderQQNT.rendererReady();
 }

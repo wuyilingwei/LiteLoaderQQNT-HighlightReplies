@@ -1,20 +1,23 @@
-// 运行在 Electron 主进程 下的插件入口
+const fs = require("fs");
+const path = require("path");
+const { BrowserWindow, ipcMain } = require("electron");
 
-
-// 加载插件时触发
-function onLoad(plugin, liteloader) {
-
+function updateStyle(webContents) {
+  const csspath = path.join(__dirname, "style.css");
+  fs.readFile(csspath, "utf-8", (err, data) => {
+    if (!err) {
+      webContents.send("LiteLoaderQQNT.custom_css.updateStyle", data);
+    }
+  });
 }
 
-
-// 创建窗口时触发
-function onBrowserWindowCreated(window, plugin) {
-
+function onLoad() {
+  ipcMain.on("LiteLoaderQQNT.custom_css.rendererReady", (event) => {
+    const window = BrowserWindow.fromWebContents(event.sender);
+    updateStyle(window.webContents);
+  });
 }
 
-
-// 这两个函数都是可选的
 module.exports = {
-    onLoad,
-    onBrowserWindowCreated
-}
+  onLoad,
+};
