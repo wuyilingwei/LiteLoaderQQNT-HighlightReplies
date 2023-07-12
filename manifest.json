@@ -1,20 +1,18 @@
 {
     "manifest_version": 1,
     "type": "extension",
-    "name": "插件模板",
-    "slug": "plugin_template",
-    "description": "LiteLoaderQQNT的插件模板",
+    "name": "高亮回复",
+    "slug": "highlightReplies",
+    "description": "高亮回复",
     "version": "0.1.0",
     "author": [
         {
-            "name": "沫烬染",
-            "link": "https://github.com/mo-jinran"
+            "name": "xinyihl",
+            "link": "https://github.com/xinyihl"
         }
     ],
     "platform": [
-        "win32",
-        "linux",
-        "darwin"
+        "win32"
     ],
     "injects": {
         "renderer": "./src/renderer.js",
