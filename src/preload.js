@@ -1,8 +1,8 @@
 const { contextBridge, ipcRenderer } = require("electron");
 
-contextBridge.exposeInMainWorld("LiteLoaderQQNT", {
+contextBridge.exposeInMainWorld("HighlightReplies", {
   updateStyle: (callback) =>
-    ipcRenderer.on("LiteLoaderQQNT.custom_css.updateStyle", callback),
+    ipcRenderer.on("LiteLoaderQQNT.HighlightReplies.updateStyle", callback),
   rendererReady: () =>
-    ipcRenderer.send("LiteLoaderQQNT.custom_css.rendererReady"),
+    ipcRenderer.send("LiteLoaderQQNT.HighlightReplies.rendererReady"),
 });

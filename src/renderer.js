@@ -18,5 +18,5 @@ export function onLoad() {
   const config = { childList: true, subtree: true };
   observer.observe(targetNode, config);
 
-  LiteLoaderQQNT.rendererReady();
+  HighlightReplies.rendererReady();
 }
