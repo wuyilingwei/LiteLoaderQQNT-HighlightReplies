@@ -1,7 +1,7 @@
 # LiteLoaderQQNT-HighlightReplies
 
 ### 功能
-高亮右键消息后的“回复”选项
+高亮右键消息后的“回复”，“撤回”和“删除”选项
 <del>没错就是这么简单</del>
 
 ### 实现
