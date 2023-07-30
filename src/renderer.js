@@ -21,7 +21,7 @@ export function onLoad() {
   });
 
   const targetNode = document.body;
-  const config = { childList: true， subtree: true };
+  const config = { childList: true, subtree: true };
   observer.observe(targetNode, config);
 
   HighlightReplies.rendererReady();
