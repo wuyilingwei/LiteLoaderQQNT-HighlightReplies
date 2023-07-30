@@ -7,6 +7,12 @@ export function onLoad() {
         );
         targetElements.forEach((element) => {
           if (element.textContent === "回复") {
+            element.parentNode.style.color = "green";
+          }
+          if (element.textContent === "撤回") {
+            element.parentNode.style.color = "red";
+          }
+          if (element.textContent === "删除") {
             element.parentNode.style.color = "red";
           }
         });
@@ -15,7 +21,7 @@ export function onLoad() {
   });
 
   const targetNode = document.body;
-  const config = { childList: true, subtree: true };
+  const config = { childList: true， subtree: true };
   observer.observe(targetNode, config);
 
   HighlightReplies.rendererReady();
