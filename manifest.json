@@ -1,5 +1,5 @@
 {
-    "manifest_version": 1,
+    "manifest_version": 3,
     "type": "extension",
     "name": "高亮回复",
     "slug": "highlightReplies",
@@ -7,8 +7,8 @@
     "version": "0.1.0",
     "author": [
         {
-            "name": "Gezhe14",
-            "link": "https://github.com/Gezhe14"
+            "name": "Gezhe14 & Yigeyigeren",
+            "link": "https://github.com/yige-yigeren/LiteLoaderQQNT-HighlightReplies"
         }
     ],
     "platform": [
