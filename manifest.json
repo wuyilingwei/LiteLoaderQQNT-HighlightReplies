@@ -4,7 +4,7 @@
     "name": "右键高亮",
     "slug": "menuhighlight",
     "description": "对右键菜单的回复/删除/撤回等功能提供高亮",
-    "thumbnail": "./icon.png",
+    "thumbnail": null,
     "version": "0.1.1",
     "author": [
         {
