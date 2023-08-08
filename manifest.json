@@ -2,23 +2,19 @@
     "manifest_version": 3,
     "type": "extension",
     "name": "右键高亮",
-    "slug": "menuhighlight",
+    "slug": "HighlightReplies",
     "description": "对右键菜单的回复/删除/撤回等功能提供高亮",
     "thumbnail": null,
     "version": "0.1.1",
     "author": [
         {
             "name": "Gezhe14 & Yigeyigeren",
-            "link": "https://github.com/yige-yigeren/LiteLoaderQQNT-menuhighlight"
+            "link": "https://github.com/yige-yigeren/LiteLoaderQQNT-HighlightReplies"
         }
     ],
     "repository": {
-        "repo": "yige-yigeren/LiteLoaderQQNT-menuhighlight",
+        "repo": "yige-yigeren/LiteLoaderQQNT-HighlightReplies",
         "branch": "v3",
-        "use_release":{
-            "tag":"latest",
-            "name":"menuhighlight.zip"
-        }
     },
     "platform": [
         "win32",
